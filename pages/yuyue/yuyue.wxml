@@ -15,13 +15,29 @@
     <view class='name'>联系人电话：</view>
     <input type='tel' placeholder='填写联系人电话'></input>
   </view>
+
   <view class='list-item'>
     <view class='name'>预约时间：</view>
-    <input type='tel' placeholder='填写联系人电话'></input>
+    <!-- <input type='tel' placeholder='填写联系人电话'></input> -->
+    <view class='date'>
+      <picker mode="date" value="{{date}}" start="{{date}}" end="{{maxdate}}" bindchange="bindDateChange">
+        <view>
+          {{date}}
+        </view>
+      </picker>
+
+      <picker mode="time" value="{{time}}" start="{{time}}" end="21:59" bindchange="bindTimeChange">
+        <view>
+          {{time}}
+        </view>
+      </picker>
+    </view>
   </view>
+
+
   <view class='list-item'>
     <view class='name'>联系人地址：</view>
-    <input type='tel' placeholder='填写联系人电话'></input>
+    <input type='tel' placeholder='填写联系人地址' value='{{address}}'></input>
   </view>
   <view class='list-item remarks'>
     <view class='name'>备注：</view>
@@ -32,7 +48,9 @@
 <view class='moneyTip'>预约订金：10.00</view>
 <view class='clause'>
   <image src='../../image/agree-icon.png'></image>
-  <view class='text'>我已查看并同意 <text>《用户协议》《隐私条款》</text></view>
+  <view class='text'>我已查看并同意
+    <text>《用户协议》《隐私条款》</text>
+  </view>
 </view>
 
 

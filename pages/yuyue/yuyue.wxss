@@ -32,8 +32,20 @@ page{
 }
 .list-item input {
   height: 100%;
+  -webkit-box-flex: 1;
+  flex: 1;
 }
 
+.list-item .date {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.list-item .date picker:first-child{
+  margin-right: 20rpx;
+}
 .list-item.remarks {
   height: 180rpx;
 }

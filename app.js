@@ -35,5 +35,9 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+
+  banner:'fdsfdsf',
+
+  APIURL:'https://nearby-service-api.mj115.com/'
 })

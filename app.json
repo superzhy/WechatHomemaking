@@ -1,12 +1,15 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/classify/classify",
+    "pages/yuyue/yuyue",
+    "pages/test/test",
     "pages/orderDetails/orderDetails",
     "pages/order/order",
-    "pages/yuyue/yuyue",
     "pages/logs/logs",
     "pages/member/member",
-    "pages/classify/classify",
+    
+    
     "pages/merchantEnter/merchantEnter"
     
   ],

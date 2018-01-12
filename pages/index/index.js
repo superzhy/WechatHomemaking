@@ -15,12 +15,13 @@ Page({
     circular: true,
     interval: 5000,
     duration: 1000,
+    middelTxt: '附近家政：基于用户位置10分钟附近家政快速反馈',
 
-    middelTxt:'附近家政：基于用户位置10分钟附近家政快速反馈'
+    classify:''
   },
 
   // 获取定位
-  location:function(){
+  location: function () {
     var that = this;
     //实例化API核心类
     qqmapsdk = new QQMapWX({
@@ -57,13 +58,13 @@ Page({
   },
 
   //用户登录
-  login:function(){
-    var that =this;
+  login: function () {
+    var that = this;
     var code, iv, encryptedData;
     wx.login({
       success: function (res) {
         code = res.code
-        
+
         //获取用户信息
         wx.getUserInfo({
           success: function (res) {
@@ -79,13 +80,72 @@ Page({
 
       }
     });
-    
+
   },
 
   //跳转
-  fnOpenWin:function(){
+  fnOpenWin: function (e) {
+    // wx.navigateTo({
+    //   url: '../classify/classify'
+    // })
+
+    var id = e.currentTarget.dataset.id
+    console.log(id)
+
     wx.navigateTo({
-      url: '../classify/classify'
+      url: '../classify/classify?id'
+    })
+  },
+
+  //页面加载
+  onLoad: function (options) {
+    console.log(app.banner);
+    this.getBanner();
+    this.getClassify();
+  },
+
+  //获取banner图
+  getBanner: function () {
+    var that = this;
+    wx.request({
+      url: app.APIURL + 'banner',
+      method: 'POST',
+      data: {},
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        // console.log(res.data)
+        var imgUrl = [];
+        res.data.results.forEach(function (item) {
+          imgUrl.push(item.image);
+        })
+        that.setData({
+          imgUrls: imgUrl
+        })
+      }
+    })
+  },
+
+
+  //获取分类
+  getClassify:function(){
+    var that = this;
+    wx.request({
+      url: app.APIURL + 'category',
+      method: 'POST',
+      data: {},
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        var imgUrl = [];
+        if (res.data.status=="success"){
+          that.setData({
+            classify: res.data.results
+          })
+        }
+      }
     })
   }
 })

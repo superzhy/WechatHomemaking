@@ -1,4 +1,5 @@
 // pages/classify/classify.js
+const app = getApp();
 Page({
 
   /**
@@ -6,16 +7,44 @@ Page({
    */
   data: {
       money:0,
-      opacity:.5,
       submit:'alert',
-      textClass:''
+      textClass:'',
+      // item:{
+      //   isChecked:true
+      // }
+      id:'',
+      items: [{ name: "钟点工保洁", id:1 }, { name: "开荒保洁", id:2 }, { name: "厨卫保洁", id:3 }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that =this;
+    console.log(options.id);
+    this.getData(options.id)
+  },
+
+  //获取信息列表
+  getData:function(_id){
+    // console.log(_id)
+    var that = this;
+    wx.request({
+      url: app.APIURL + 'sub_category ',
+      method: 'POST',
+      data: {
+        id:_id
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        // console.log(res.data)
+        that.setData({
+          items: res.data.results
+        })
+      }
+    })
   },
 
   /**
@@ -68,21 +97,48 @@ Page({
   },
 
 
-  alert:function(){
-    console.log(1)
+  submit:function(){
+    var data={};
+    var money = this.data.money;
+    var id = this.data.id
+    // console.log(data)
     wx.navigateTo({
-      url: '../yuyue/yuyue'
+      url: '../yuyue/yuyue?money='+money+'&id='+id
     })
   },
+  checked:function(e){
+    // console.log(e);
+    var that = this;
 
-  select:function(){
-    console.log(1)
-    this.setData({
+    // var data = e.
 
-      textClass:'select'
-
+    //设置按钮选中
+    var currentItem = e.currentTarget.dataset;
+    console.log(currentItem);
+    var data = this.data.items.map(function(item){
+      if(item.id!=currentItem.id){
+        item.isChecked = false
+      }else {
+        item.isChecked = true
+      }
+      return item
     })
-    
+    // console.log(data);
+
+    this.setData({
+      items: data
+    });
+
+    //获取id
+    this.setData({
+      id: e.currentTarget.dataset.id
+    })
+    //获取价格
+    var money = e.currentTarget.dataset.money;
+    // console.log(money);
+    this.setData({
+      money:money
+    })
   }
 
 })

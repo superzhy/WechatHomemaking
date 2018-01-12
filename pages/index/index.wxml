@@ -16,28 +16,12 @@
 
 <!-- 功能 -->
 <view class='list-view'>
-  <view class='list-item'>
-    <image src='../../image/index01.png'></image>
-    <text class='txt'>保洁清洗</text>
-  </view>
-  <view class='list-item'>
-    <image src='../../image/index02.png'></image>
-    <text class='txt'>保姆月嫂</text>
-  </view>
-  <view class='list-item' bindtap='fnOpenWin'>
-    <image src='../../image/index03.png'></image>
-    <text class='txt'>管道疏通</text>
-  </view>
-  <view class='list-item'>
-    <image src='../../image/index04.png'></image>
-    <text class='txt'>家电维修</text>
-  </view>
-  <view class='list-item'>
-    <image src='../../image/index05.png'></image>
-    <text class='txt'>搬家运输</text>
-  </view>
-  <view class='list-item'>
-    <image src='../../image/index06.png'></image>
-    <text class='txt'>绿化除虫</text>
-  </view>
+  <!-- <view class='list-item' wx:for="{{classify}}" data-id='{{item.id}}' bindtap='fnOpenWin'>
+    <image src='{{item.icon}}'></image>
+    <text class='txt'>{{item.name}}</text>
+  </view> -->
+  <navigator class="list-item" wx:for="{{classify}}" url="../classify/classify?id={{item.id}}">
+    <image src='{{item.icon}}'></image>
+    <text class='txt'>{{item.name}}</text>
+  </navigator>
 </view>

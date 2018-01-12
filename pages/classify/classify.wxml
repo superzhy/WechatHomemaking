@@ -14,22 +14,22 @@
     <view style="background: blue; width: 100px; height: 100px"></view>
     <view style="background: yellow; width: 100px; height: 100px"></view> -->
 
-    <view class='list-item'>
-      <view class='btn'>
-        <text></text>
-      </view>
-      <view class='img'>
-        <image src='../../image/classify01.png'></image>
-      </view>
-
-      <view class='cont'>
-        <view class='title'>钟点工保洁</view>
-        <view class='subtitle'>家庭日常保洁，企业卫生保洁，室内玻璃清洁等 室内玻璃清洁等</view>
-      </view>
+  <view class='list-item' wx:for="{{items}}">
+    <view class="btn {{item.isChecked ? 'item-checked' : ''}}" data-money='{{item.price}}' bindtap='checked' data-id='{{item.id}}'>
+      <text class="{{item.isChecked ? 'item-checked' : ''}}"></text>
+    </view>
+    <view class='img'>
+      <image src='{{item.icon}}'></image>
     </view>
 
-    <view class='list-item'>
-      <view class='btn' bindtap='select'>
+    <view class='cont'>
+      <view class='title'>{{item.name}}</view>
+      <view class='subtitle'>{{item.desc}}</view>
+    </view>
+  </view>
+
+  <!-- <view class='list-item'>
+      <view class='btn'id='select2' bindtap='checked'>
         <text class='{{textClass}}'></text>
       </view>
       <view class='img'>
@@ -43,7 +43,7 @@
     </view>
 
     <view class='list-item'>
-      <view class='btn'>
+      <view class='btn' id='select3' bindtap='checked'>
         <text></text>
       </view>
       <view class='img'>
@@ -57,7 +57,7 @@
     </view>
 
     <view class='list-item'>
-      <view class='btn'>
+      <view class='btn' id='select4' bindtap='checked'>
         <text></text>
       </view>
       <view class='img'>
@@ -71,7 +71,7 @@
     </view>
 
     <view class='list-item'>
-      <view class='btn'>
+      <view  data-id="5"  class="btn {{item.isChecked ? 'item-checked' : '' }}" id='select5' bindtap='checked'>
         <text></text>
       </view>
       <view class='img'>
@@ -85,7 +85,7 @@
     </view>
 
     <view class='list-item'>
-      <view class='btn'>
+      <view class='btn' id='select6' bindtap='checked'>
         <text></text>
       </view>
       <view class='img'>
@@ -96,7 +96,7 @@
         <view class='title'>家具清洗</view>
         <view class='subtitle'>沙发清洗，地毯清洗，窗帘清洗，壁纸清洗等</view>
       </view>
-    </view>
+    </view> -->
 
 </view>
 
@@ -104,5 +104,8 @@
   <view class='item money'>预约订金：¥
     <text>{{money}}</text>
   </view>
-  <view class='item btn' style='opacity:{{opacity}}' bindtap='{{submit}}'>提交</view>
+  <view class='item'>
+    <view class='mask' wx:if="{{money<=0}}"></view>
+    <view class='btn' bindtap='submit'>提交</view>
+  </view>
 </view>

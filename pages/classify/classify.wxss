@@ -34,7 +34,7 @@
   border-radius: 50%;
   vertical-align: middle;
 }
-.list-item .btn text.select {
+.list-item .btn text.item-checked{
   background: #ff6000;
 }
 .list-item .img {
@@ -78,6 +78,7 @@
 #footer .item {
   -webkit-box-flex: 1;
   flex: 1;
+  position: relative;
 }
 #footer .item.money {
   box-sizing: border-box;
@@ -85,7 +86,13 @@
   font-size: 30rpx;
   color: #ff6000;
 }
-#footer .item.btn {
+#footer .item .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.4);
+}
+#footer .item .btn {
   background: #ff6000;
   color: #fff;
   text-align: center;
