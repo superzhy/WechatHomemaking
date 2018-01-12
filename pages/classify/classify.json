@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ff6000",
+  "navigationBarTitleText": "分类",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true
+}

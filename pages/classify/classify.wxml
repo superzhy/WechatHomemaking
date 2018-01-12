@@ -1,0 +1,108 @@
+<!--pages/classify/classify.wxml-->
+
+
+<view id='main'>
+  <!-- <scroll-view class='scroll-box' scroll-y="true">
+    
+  </scroll-view> -->
+  <!-- <view style="background: red; width: 100px; height: 100px"></view>
+    <view style="background: green; width: 100px; height: 100px"></view>
+    <view style="background: blue; width: 100px; height: 100px"></view>
+    <view style="background: yellow; width: 100px; height: 100px"></view>
+    <view style="background: red; width: 100px; height: 100px"></view>
+    <view style="background: green; width: 100px; height: 100px"></view>
+    <view style="background: blue; width: 100px; height: 100px"></view>
+    <view style="background: yellow; width: 100px; height: 100px"></view> -->
+
+    <view class='list-item'>
+      <view class='btn'>
+        <text></text>
+      </view>
+      <view class='img'>
+        <image src='../../image/classify01.png'></image>
+      </view>
+
+      <view class='cont'>
+        <view class='title'>钟点工保洁</view>
+        <view class='subtitle'>家庭日常保洁，企业卫生保洁，室内玻璃清洁等 室内玻璃清洁等</view>
+      </view>
+    </view>
+
+    <view class='list-item'>
+      <view class='btn' bindtap='select'>
+        <text class='{{textClass}}'></text>
+      </view>
+      <view class='img'>
+        <image src='../../image/classify02.png'></image>
+      </view>
+
+      <view class='cont'>
+        <view class='title'>开荒保洁</view>
+        <view class='subtitle'>新房开荒，垃圾清运，全套大扫除等</view>
+      </view>
+    </view>
+
+    <view class='list-item'>
+      <view class='btn'>
+        <text></text>
+      </view>
+      <view class='img'>
+        <image src='../../image/classify03.png'></image>
+      </view>
+
+      <view class='cont'>
+        <view class='title'>厨卫清理</view>
+        <view class='subtitle'>抽油烟机，冰箱，空调，马桶等</view>
+      </view>
+    </view>
+
+    <view class='list-item'>
+      <view class='btn'>
+        <text></text>
+      </view>
+      <view class='img'>
+        <image src='../../image/classify04.png'></image>
+      </view>
+
+      <view class='cont'>
+        <view class='title'>高空清洁</view>
+        <view class='subtitle'>外墙清洗，玻璃外墙清洗等</view>
+      </view>
+    </view>
+
+    <view class='list-item'>
+      <view class='btn'>
+        <text></text>
+      </view>
+      <view class='img'>
+        <image src='../../image/classify05.png'></image>
+      </view>
+
+      <view class='cont'>
+        <view class='title'>家电清洗</view>
+        <view class='subtitle'>冰箱清洗，空调清洗，灯具清洗等</view>
+      </view>
+    </view>
+
+    <view class='list-item'>
+      <view class='btn'>
+        <text></text>
+      </view>
+      <view class='img'>
+        <image src='../../image/classify06.png'></image>
+      </view>
+
+      <view class='cont'>
+        <view class='title'>家具清洗</view>
+        <view class='subtitle'>沙发清洗，地毯清洗，窗帘清洗，壁纸清洗等</view>
+      </view>
+    </view>
+
+</view>
+
+<view id='footer'>
+  <view class='item money'>预约订金：¥
+    <text>{{money}}</text>
+  </view>
+  <view class='item btn' style='opacity:{{opacity}}' bindtap='{{submit}}'>提交</view>
+</view>

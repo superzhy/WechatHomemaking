@@ -1,0 +1,88 @@
+/* pages/yuyue/yuyue.wxss */
+page{
+  background: #eeeff3;
+}
+
+.list-item{
+  padding: 0 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #eeeff3;
+}
+
+.list-item icon {
+  /* height: 33rpx; */
+  width: 33rpx;
+  margin-right: 20rpx;
+}
+.list-item icon image {
+  display: block;
+  width: 33rpx;
+  height: 33rpx;
+  margin-top: 29rpx;
+}
+
+.list-item .name {
+  width: 190rpx;
+}
+.list-item input {
+  height: 100%;
+}
+
+.list-item.remarks {
+  height: 180rpx;
+}
+
+.list-item.remarks textarea{
+  padding: 30rpx 0;
+  height: 160rpx;
+  line-height: 50rpx;
+  box-sizing: border-box;
+}
+
+
+.moneyTip {
+  padding:30rpx;
+  text-align: right;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #ff6000;
+}
+
+.clause {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 30rpx;
+  height: 42rpx;
+  font-size: 32rpx;
+  line-height: 42rpx;
+}
+
+.clause image {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.clause .text {
+  padding-left: 20rpx;
+}
+
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98rpx;
+  font-size: 32rpx;
+  line-height: 98rpx;
+  text-align: center;
+  color: #fff;
+  background: #ff6000;
+}

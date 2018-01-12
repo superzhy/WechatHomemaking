@@ -1,0 +1,55 @@
+/**index.wxss**/
+page {
+  background: #eeeff3;
+}
+.swiper {
+  height: 400rpx;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.middle-txt {
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 70rpx;
+  background: #eeeff3;
+}
+
+/* 功能 */
+.list-view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.list-view .list-item {
+  box-sizing: border-box;
+  width: 250rpx;
+  height: 250rpx;
+  border-bottom: 1rpx solid #eeeff3;
+  text-align: center;
+  /* line-height: 250rpx; */
+  position: relative
+}
+.list-view .list-item .txt {
+  position: absolute;
+  bottom: 28rpx;
+  left: 0;
+  width: 100%;
+  font-size: 28rpx;
+}
+.list-view .list-item image {
+   width: 100%; 
+   height: 100%; 
+}
+.list-view .list-item:active {
+  background: #ddd;
+}
+.list-view .list-item:nth-child(3n-1){
+  border-right: 1rpx solid #eeeff3;
+  border-left: 1rpx solid #eeeff3;
+}

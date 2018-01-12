@@ -1,0 +1,67 @@
+<!--pages/order/order.wxml-->
+
+<!-- 无订单 -->
+<view id='noOrder' wx:if="{{false}}">
+
+    <image src='../../image/noOrder.png'></image>
+    <view class='tip'>暂无订单信息</view>
+</view>
+
+
+<!-- 订单主内容 -->
+<view id='main'>
+    <view class='list-view' bindtap='fnOpenWin'>
+      <view class='top'>
+        <text class='name'>金牌月嫂</text>
+        <text class='state'>等待接单</text>
+      </view>
+      <view class='list-item'>
+          <view class='name'>预约时间:</view>
+          <text class='txt'>2018-02-09 00:00</text>
+      </view>
+
+      <view class='list-item'>
+          <view class='name'>预约地址:</view>
+          <text class='txt'>河南省漯河市</text>
+      </view>
+
+      <view class='list-item remarks'>
+          <view class='name'>我的备注:</view>
+          <text class='txt'>河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市</text>
+      </view>
+
+      <view class='moneyTip'>预约订金：10.00</view>
+
+      <view class='btn-box'>
+      <text></text>
+        <view class='btn'>取消订单</view>
+      </view>
+    </view>
+    <view class='list-view'>
+      <view class='top'>
+        <text class='name'>金牌月嫂</text>
+        <text class='state'>等待接单</text>
+      </view>
+      <view class='list-item'>
+          <view class='name'>预约时间:</view>
+          <text class='txt'>2018-02-09 00:00</text>
+      </view>
+
+      <view class='list-item'>
+          <view class='name'>预约地址:</view>
+          <text class='txt'>河南省漯河市</text>
+      </view>
+
+      <view class='list-item remarks'>
+          <view class='name'>我的备注:</view>
+          <text class='txt'>河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市河南省漯河市</text>
+      </view>
+
+      <view class='moneyTip'>预约订金：10.00</view>
+
+      <view class='btn-box'>
+      <text></text>
+        <view class='btn'>取消订单</view>
+      </view>
+    </view>
+</view>

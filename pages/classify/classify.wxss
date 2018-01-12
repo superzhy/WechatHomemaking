@@ -1,0 +1,92 @@
+/* pages/classify/classify.wxss */
+
+ page {
+  height: 100%;
+  background: #eeeff3;
+}
+
+#main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  overflow: hidden;
+   margin-bottom: 25px; 
+}
+
+.list-item {
+  height: 170rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 30rpx;
+  line-height: 170rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #eeeff3;
+}
+.list-item .btn {
+  padding-right: 45rpx;
+}
+.list-item .btn text {
+  display: inline-block;
+  width: 48rpx;
+  height: 48rpx;
+  border: 2rpx solid #919191;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.list-item .btn text.select {
+  background: #ff6000;
+}
+.list-item .img {
+  width: 121rpx;
+  margin-right:45rpx;
+}
+
+.list-item .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.list-item .title {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+
+.list-item .subtitle {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #919191;
+}
+
+
+#footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  z-index: 999;
+  background: #fff;
+  height: 98rpx;
+  line-height: 98rpx;
+}
+
+#footer .item {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+#footer .item.money {
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: #ff6000;
+}
+#footer .item.btn {
+  background: #ff6000;
+  color: #fff;
+  text-align: center;
+}

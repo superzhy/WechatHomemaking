@@ -1,0 +1,41 @@
+<!--pages/member/member.wxml-->
+<view id='top'>
+  <view class='head'>
+    <image src='../../image/head.png'></image>
+  </view>
+  <text class='name'>微信名字sdfdsff</text>
+  <view class='btn-box'>
+    <view class='btn'>
+    <image src='../../image/clear.png'></image>
+  </view>
+  <view class='btn'>
+    <image src='../../image/sync.png'></image>
+  </view>
+  </view>
+</view>
+
+
+<view id='main'>
+  <view class='title'>
+    <view class='icon'>
+      <image src='../../image/order01.png'></image>
+    </view>
+    <text class='name'>订单管理</text>
+    <view class='arrow'>
+      <image src='../../image/arrow01.png'></image>
+    </view>
+  </view>
+  <view class='item'>
+    <icon>
+      <image src='../../image/arrow02.png'></image>
+    </icon>
+    <text class='name'>我的订单</text>
+  </view>
+
+  <view class='item' bindtap='fnOpenMerchant'>
+    <icon>
+      <image src='../../image/arrow02.png'></image>
+    </icon>
+    <text class='name'>商家入驻</text>
+  </view>
+</view>

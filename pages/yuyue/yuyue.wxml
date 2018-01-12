@@ -1,0 +1,39 @@
+<!--pages/yuyue/yuyue.wxml-->
+<view class='list-view'>
+  <view class='list-item selectAdress'>
+    <icon>
+      <image src='../../image/location-icon.png'></image>
+    </icon>
+    <text>选择地址</text>
+  </view>
+
+  <view class='list-item'>
+    <view class='name'>联系人姓名：</view>
+    <input type='text' placeholder='填写联系人姓名'></input>
+  </view>
+  <view class='list-item'>
+    <view class='name'>联系人电话：</view>
+    <input type='tel' placeholder='填写联系人电话'></input>
+  </view>
+  <view class='list-item'>
+    <view class='name'>预约时间：</view>
+    <input type='tel' placeholder='填写联系人电话'></input>
+  </view>
+  <view class='list-item'>
+    <view class='name'>联系人地址：</view>
+    <input type='tel' placeholder='填写联系人电话'></input>
+  </view>
+  <view class='list-item remarks'>
+    <view class='name'>备注：</view>
+    <textarea placeholder='备注'></textarea>
+  </view>
+</view>
+
+<view class='moneyTip'>预约订金：10.00</view>
+<view class='clause'>
+  <image src='../../image/agree-icon.png'></image>
+  <view class='text'>我已查看并同意 <text>《用户协议》《隐私条款》</text></view>
+</view>
+
+
+<view class='btn'>立即预约</view>

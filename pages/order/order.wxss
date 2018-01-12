@@ -1,0 +1,112 @@
+/* pages/order/order.wxss */
+page {
+  height: 100%;
+}
+
+#noOrder {
+  /* width: 100%;
+  height: 100%; */
+  padding-top: 258rpx;
+  text-align: center;
+}
+
+#noOrder image {
+  width: 126rpx;
+  height: 128rpx;
+}
+
+#noOrder .tip {
+  margin-top:65rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #919191;
+}
+
+
+
+/* 订单主内容 */
+#main {
+  height: 100%;
+  background: #eeeff3;
+}
+#main .list-view {
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+  background: #fff;
+}
+#main .list-view .top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  height: 91rpx;
+  line-height: 91rpx;
+}
+
+.list-view .top .name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.list-view .top .state {
+  font-size: 28rpx;
+  color: #ff6000;
+}
+
+.list-view .list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+
+.list-view .list-item .name {
+  width: 150rpx;
+  color: #919191;
+}
+
+.list-view .list-item .txt {
+  width: 80%;
+  overflow: hidden;
+}
+
+.list-view .list-item.remarks {
+  height: 150rpx;
+}
+.list-view .list-item.remarks .txt {
+  padding: 20rpx 0;
+  height: 130rpx;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  overflow: scroll
+}
+
+.list-view .moneyTip {
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: right;
+  color: #ff6000;
+  border-bottom: 1rpx solid #eeeff3;
+}
+
+.list-view .btn-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  height: 120rpx;
+}
+
+.list-view .btn-box .btn {
+  margin-top: 30rpx;
+  width: 150rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #ff6000;
+  border-radius: 10rpx;
+}

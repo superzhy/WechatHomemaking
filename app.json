@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/orderDetails/orderDetails",
+    "pages/order/order",
+    "pages/yuyue/yuyue",
+    "pages/logs/logs",
+    "pages/member/member",
+    "pages/classify/classify",
+    "pages/merchantEnter/merchantEnter"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff6000",
+    "navigationBarTitleText": "附近家政",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#ff6000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "服务下单",
+        "iconPath": "libs/icon/index.png",
+        "selectedIconPath": "libs/icon/index_act.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单中心",
+        "iconPath": "libs/icon/order.png",
+        "selectedIconPath": "libs/icon/order_act.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "会员中心",
+        "iconPath": "libs/icon/my.png",
+        "selectedIconPath": "libs/icon/my_act.png"
+      }
+    ]
+  }
+}

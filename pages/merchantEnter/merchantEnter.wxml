@@ -1,0 +1,20 @@
+<!--pages/merchantEnter/merchantEnter.wxml-->
+<view class='main'>
+  <view class='item name'>姓名:</view>
+  <view class='item'>
+    <input type='text' class='nameValue' placeholder='请填写您的真实姓名'></input>
+  </view>
+  <view class='item name'>联系电话:</view>
+  <view class='item'>
+    <input type='tel' class='phoneValue' placeholder='请填写您的联系电话'></input>
+  </view>
+  <view class='item name'>手机验证:</view>
+  <view class='item verify'>
+    <input type='tel' class='nameValue' placeholder='请填写您的验证码'></input>
+    <view class='verifyCode'>获取验证码</view>
+  </view>
+  
+  <view class='btn'>
+    <button>立即提交</button>
+  </view>
+</view>

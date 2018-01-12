@@ -1,0 +1,68 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view id='wrap'>
+  <view id='header'>
+    <view class='cont'>
+      <view class='title'>待接单</view>
+      <view class='subtitle'>等待商户接单</view>
+    </view>
+    <icon>
+      <image src='../../image/order02.png'></image>
+    </icon>
+  </view>
+  <view id='main'>
+
+    <!-- s1 -->
+    <view class='section s1'>
+      <view class='title'>
+        <image src='../../image/order03.png'></image>
+        <text>保姆月嫂</text>
+      </view>
+      <view class='cont'>
+        <image src='../../image/order04.png'></image>
+        <view class='text'>
+          <view class='name'>金牌月嫂</view>
+          <view class='num'>x1</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- s2 -->
+    <view class='section s2'>
+      <view class='list-item'>
+        <view class='name'>姓名:</view>
+        <text class='txt'>范德萨范德萨发</text>
+      </view>
+
+      <view class='list-item'>
+        <view class='name'>电话：</view>
+        <text class='txt'>110</text>
+      </view>
+
+      <view class='list-item'>
+        <view class='name'>地址:</view>
+        <text class='txt'>河南省漯河市1111</text>
+      </view>
+
+      <view class='list-item remarks'>
+        <view class='name'>我的备注:</view>
+        <text class='txt'>河南省漯河市河南省漯河南省漯河市河南省漯河南省漯河市河南省漯河南省漯河市河南省漯</text>
+      </view>
+    </view>
+
+    <!-- s3 -->
+    <view class='section s3'>
+      <view class='list-item'>
+        <view class='name'>订单编号:</view>
+        <text class='txt'>20181201245454545454</text>
+      </view>
+
+      <view class='list-item'>
+        <view class='name'>下单时间:</view>
+        <text class='txt'>2018-02-02 14：20</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view id='footer'>取消订单</view>
+</view>
