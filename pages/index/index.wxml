@@ -10,18 +10,22 @@
 </swiper>
 
 <!-- 中部文字  -->
-<view class='middle-txt'>
+<view class='middle-txt' bindtap='login'>
   <text>{{middelTxt}}</text>
 </view>
 
 <!-- 功能 -->
 <view class='list-view'>
-  <!-- <view class='list-item' wx:for="{{classify}}" data-id='{{item.id}}' bindtap='fnOpenWin'>
+   <!-- <view class='list-item' wx:for="{{classify}}" data-id='{{item.id}}' bindtap='fnOpenWin'>
     <image src='{{item.icon}}'></image>
     <text class='txt'>{{item.name}}</text>
-  </view> -->
-  <navigator class="list-item" wx:for="{{classify}}" url="../classify/classify?id={{item.id}}">
+  </view>  -->
+   <navigator class="list-item" wx:for="{{classify}}" url="../classify/classify?id={{item.id}}">
     <image src='{{item.icon}}'></image>
     <text class='txt'>{{item.name}}</text>
-  </navigator>
+  </navigator> 
+  <!-- <navigator class="list-item" url="../classify/classify">
+    <image src='../../image/index01.png'></image>
+    <text class='txt'>保洁清洗</text>
+  </navigator> -->
 </view>

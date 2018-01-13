@@ -13,7 +13,7 @@ Page({
       //   isChecked:true
       // }
       id:'',
-      items: [{ name: "钟点工保洁", id:1 }, { name: "开荒保洁", id:2 }, { name: "厨卫保洁", id:3 }]
+      items:''
   },
 
   /**
@@ -21,28 +21,36 @@ Page({
    */
   onLoad: function (options) {
     var that =this;
-    console.log(options.id);
-    this.getData(options.id)
+    // console.log(options.id);
+    this.setData({
+      id:options.id
+    })
+    this.getData()
   },
 
   //获取信息列表
-  getData:function(_id){
+  getData:function(){
     // console.log(_id)
+    wx.showLoading({
+      title: '加载中',
+    })
+    var id =this.data.id;
     var that = this;
     wx.request({
-      url: app.APIURL + 'sub_category ',
+      url: app.APIURL + 'sub_category',
       method: 'POST',
       data: {
-        id:_id
+        'id':id
       },
       header: {
         'content-type': 'application/json'
       },
       success: function (res) {
-        // console.log(res.data)
+        // console.log(res)
         that.setData({
           items: res.data.results
         })
+        wx.hideLoading();
       }
     })
   },
@@ -79,7 +87,9 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    wx.stopPullDownRefresh() ;
+    console.log(1)
+    this.getData();
   },
 
   /**

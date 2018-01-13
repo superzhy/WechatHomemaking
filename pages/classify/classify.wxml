@@ -14,7 +14,7 @@
     <view style="background: blue; width: 100px; height: 100px"></view>
     <view style="background: yellow; width: 100px; height: 100px"></view> -->
 
-  <view class='list-item' wx:for="{{items}}">
+    <view class='list-item' wx:for="{{items}}">
     <view class="btn {{item.isChecked ? 'item-checked' : ''}}" data-money='{{item.price}}' bindtap='checked' data-id='{{item.id}}'>
       <text class="{{item.isChecked ? 'item-checked' : ''}}"></text>
     </view>
@@ -26,9 +26,9 @@
       <view class='title'>{{item.name}}</view>
       <view class='subtitle'>{{item.desc}}</view>
     </view>
-  </view>
+  </view>  
 
-  <!-- <view class='list-item'>
+   <!-- <view class='list-item'>
       <view class='btn'id='select2' bindtap='checked'>
         <text class='{{textClass}}'></text>
       </view>
@@ -96,7 +96,7 @@
         <view class='title'>家具清洗</view>
         <view class='subtitle'>沙发清洗，地毯清洗，窗帘清洗，壁纸清洗等</view>
       </view>
-    </view> -->
+    </view>  -->
 
 </view>
 

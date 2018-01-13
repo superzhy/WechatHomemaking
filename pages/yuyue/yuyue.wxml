@@ -45,7 +45,7 @@
   </view>
 </view>
 
-<view class='moneyTip'>预约订金：10.00</view>
+<view class='moneyTip'>预约订金：{{money}}</view>
 <view class='clause'>
   <image src='../../image/agree-icon.png'></image>
   <view class='text'>我已查看并同意
@@ -54,4 +54,4 @@
 </view>
 
 
-<view class='btn'>立即预约</view>
+<view class='btn' bindtap='submit'>立即预约</view>

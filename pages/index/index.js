@@ -20,44 +20,7 @@ Page({
     classify:''
   },
 
-  // 获取定位
-  location: function () {
-    var that = this;
-    //实例化API核心类
-    qqmapsdk = new QQMapWX({
-      key: 'RYDBZ-I5Q6G-3T4QL-IB3WB-YS5FT-YUFRI'
-    });
-
-    wx.getLocation({
-      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
-      success: function (res) {
-        // console.log(res.latitude);
-        // console.log(res.longitude);
-
-
-        //根据坐标逆解析地址
-        qqmapsdk.reverseGeocoder({
-          location: {
-            latitude: res.latitude,
-            longitude: res.longitude
-          },
-          success: function (res) {
-            // console.log(res);
-            var address = res.result.address;
-            that.address = address;
-            console.log(address);
-          },
-          fail: function (res) {
-            console.log(res);
-          }
-        });
-
-
-      }
-    })
-  },
-
-  //用户登录
+  // //用户登录
   login: function () {
     var that = this;
     var code, iv, encryptedData;
@@ -99,7 +62,6 @@ Page({
 
   //页面加载
   onLoad: function (options) {
-    console.log(app.banner);
     this.getBanner();
     this.getClassify();
   },
@@ -107,6 +69,9 @@ Page({
   //获取banner图
   getBanner: function () {
     var that = this;
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.request({
       url: app.APIURL + 'banner',
       method: 'POST',
@@ -116,6 +81,7 @@ Page({
       },
       success: function (res) {
         // console.log(res.data)
+        
         var imgUrl = [];
         res.data.results.forEach(function (item) {
           imgUrl.push(item.image);
@@ -123,6 +89,7 @@ Page({
         that.setData({
           imgUrls: imgUrl
         })
+        wx.hideLoading();
       }
     })
   },
@@ -130,6 +97,9 @@ Page({
 
   //获取分类
   getClassify:function(){
+    wx.showLoading({
+      title: '加载中',
+    })
     var that = this;
     wx.request({
       url: app.APIURL + 'category',
@@ -145,6 +115,7 @@ Page({
             classify: res.data.results
           })
         }
+        wx.hideLoading();
       }
     })
   }

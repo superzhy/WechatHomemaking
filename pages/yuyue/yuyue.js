@@ -22,6 +22,13 @@ Page({
   onLoad: function (options) {
     console.log(options)
     // console.log(1)
+    // this.seteData({
+    //   id:''
+    // });
+    this.setData({
+      id:options.id,
+      money: options.money
+    })
     
     this.getAddress();
 
@@ -136,4 +143,11 @@ Page({
       time: e.detail.value
     })
   },
+
+
+
+  //立即预约
+  submit:function(){
+    var openid = olocm0SqbMmK12A1AcHed3eMqlMA;
+  }
 })
