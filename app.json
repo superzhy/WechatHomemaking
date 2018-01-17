@@ -8,10 +8,7 @@
     "pages/order/order",
     "pages/logs/logs",
     "pages/member/member",
-    
-    
     "pages/merchantEnter/merchantEnter"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -2,5 +2,6 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ff6000",
   "navigationBarTitleText": "订单中心",
-  "navigationBarTextStyle": "#fff"
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true
 }

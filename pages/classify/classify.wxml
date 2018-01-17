@@ -14,7 +14,7 @@
     <view style="background: blue; width: 100px; height: 100px"></view>
     <view style="background: yellow; width: 100px; height: 100px"></view> -->
 
-    <view class='list-item' wx:for="{{items}}">
+    <view class='list-item' wx:for="{{items}}" wx:key="key">
     <view class="btn {{item.isChecked ? 'item-checked' : ''}}" data-money='{{item.price}}' bindtap='checked' data-id='{{item.id}}'>
       <text class="{{item.isChecked ? 'item-checked' : ''}}"></text>
     </view>

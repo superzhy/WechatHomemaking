@@ -1,6 +1,6 @@
 <!--pages/yuyue/yuyue.wxml-->
 <view class='list-view'>
-  <view class='list-item selectAdress'>
+  <view class='list-item selectAdress' bindtap='selectAddress'>
     <icon>
       <image src='../../image/location-icon.png'></image>
     </icon>
@@ -9,11 +9,11 @@
 
   <view class='list-item'>
     <view class='name'>联系人姓名：</view>
-    <input type='text' placeholder='填写联系人姓名'></input>
+    <input type='text' placeholder='填写联系人姓名' bindinput="bindName" value='{{name}}'></input>
   </view>
   <view class='list-item'>
     <view class='name'>联系人电话：</view>
-    <input type='tel' placeholder='填写联系人电话'></input>
+    <input type='tel' placeholder='填写联系人电话' bindinput="bindPhone" value='{{phone}}'></input>
   </view>
 
   <view class='list-item'>
@@ -37,11 +37,11 @@
 
   <view class='list-item'>
     <view class='name'>联系人地址：</view>
-    <input type='tel' placeholder='填写联系人地址' value='{{address}}'></input>
+    <input type='tel' placeholder='填写联系人地址' value='{{address}}' bindinput='bindAddress'></input>
   </view>
   <view class='list-item remarks'>
     <view class='name'>备注：</view>
-    <textarea placeholder='备注'></textarea>
+    <textarea placeholder='备注' bindinput="bindRemarks" value='{{remarks}}'></textarea>
   </view>
 </view>
 
@@ -54,4 +54,6 @@
 </view>
 
 
-<view class='btn' bindtap='submit'>立即预约</view>
+<view class='footer'>
+  <view class='btn' bindtap='submit'>立即预约</view>
+</view>
